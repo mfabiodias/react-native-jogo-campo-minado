@@ -79,6 +79,7 @@ const openField = (board, row, column) => {
     if(!field.opened)
     {
         field.opened = true
+        field.flagged = false
 
         if(field.mined)
         {
@@ -102,8 +103,12 @@ const pendding = field => (field.mined && !field.flagged) || (!field.mined && !f
 const wonGame = board => fields(board).filter(pendding).length === 0
 const showMines = board => fields(board).filter(field => field.mined).forEach(field => field.opened = true)
 const invertFlag = (board, row, column) => {
-    const field = board[row][column]
-    field.flagged = !field.flagged
+    // Não permite colocar bandeira em campo aberto
+    if(!board[row][column].opened)
+    {
+        const field = board[row][column]
+        field.flagged = !field.flagged
+    }
 }
 const flagsUsed = board => fields(board).filter(field => field.flagged).length
 

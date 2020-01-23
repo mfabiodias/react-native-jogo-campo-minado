@@ -43,22 +43,21 @@ export default class App extends Component {
       showMines(board)
       //Alert.alert("Perdeu!!!", "Que burro...")
       Alert.alert(
-        'Perdeu',
-        'Que burro',
+        'Você Perdeu!',
+        'Não desenime e continue tentando.',
         [
-          {text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
+          //{text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
           {text: 'Ok', onPress: () => this.setState(this.createState())},
-    
         ]
       )
     }
     else if(won)
     {
       Alert.alert(
-        'Parabéns',
-        'Você ganhou',
+        'Parabéns!',
+        'Você ganhou.',
         [
-          {text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
+          //{text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
           {text: 'OK', onPress: () => this.setState(this.createState())},
     
         ]
@@ -78,10 +77,10 @@ export default class App extends Component {
       //Alert.alert("Parabéns!!!", "Você ganhou!")
 
       Alert.alert(
-        'Parabéns',
-        'Você ganhou',
+        'Parabéns!',
+        'Você ganhou.',
         [
-          {text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
+          //{text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
           {text: 'OK', onPress: () => this.setState(this.createState())},
     
         ]
