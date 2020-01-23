@@ -9,11 +9,11 @@ export default props => {
                 <View style={styles.container}>
                     <Text style={styles.title}>Selecione o Nível</Text>
                     <TouchableOpacity style={styles.button}
-                        onPress={() => props.onLevelSelected(0.05)} >
+                        onPress={() => props.onLevelSelected(0.03)} >
                         <Text style={[styles.buttonLabel, styles.bgEasy]}>Fácil</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}
-                        onPress={() => props.onLevelSelected(0.08)} >
+                        onPress={() => props.onLevelSelected(0.05)} >
                         <Text style={[styles.buttonLabel, styles.bgNormal]}>Intermediário</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.button}
