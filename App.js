@@ -44,7 +44,7 @@ export default class App extends Component {
       //Alert.alert("Perdeu!!!", "Que burro...")
       Alert.alert(
         'Você Perdeu!',
-        'Não desanime e continue tentando.',
+        'Continue tentando',
         [
           //{text: 'Cancel', onPress: () => console.log('Cancel Pressed!')},
           {text: 'Ok', onPress: () => this.setState(this.createState())},
